@@ -1,0 +1,49 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    <div class="main">
+        <!-- =============header starts here========== -->
+        {% include 'navbar.html' %}
+        <!-- =============header ends here========== -->
+            <!-- <i class="fa-brands fa-facebook fa-beat-fade"></i>
+            <i class="fa-brands fa-twitter fa-beat-fade"></i>
+            <i class="fa-brands fa-whatsapp fa-beat-fade"></i> -->
+    <!-- =============Home starts here========== -->
+    {% include 'daberechi/home_component.html' %}
+    <!-- =============Home ends here========== -->
+
+    <!-- =============about starts here========== -->
+    {% include 'daberechi/about_component.html' %}
+ <!-- =============about ends here========== -->
+
+
+  <!-- =============skill starts here========== -->
+  {% include 'daberechi/skill_component.html' %}
+<!-- =============skill ends here========== -->
+
+
+  <!-- =============portfolio starts here========== -->
+  {% include 'daberechi/portfolio_component.html' %}
+  <!-- =============portfolio ends here========== -->
+
+
+  <!-- =============contact starts here========== -->
+  {% include 'daberechi/contact_component.html' %}
+  <!-- =============contact ends here========== -->
+
+</div>
+  <!-- =============footer====================== -->
+{% include 'daberechi/footer_component.html' %}
+  <!-- =============footer ends====================== -->
+
+<script>
+var sidemenu = document.getElementById("sidemenu");
+
+function openmenu(){
+    sidemenu.style.right = "0";
+}
+function closemenu(){
+    sidemenu.style.right = "-200px";
+}
+</script>
+{% endblock content %}

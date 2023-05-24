@@ -1,0 +1,26 @@
+
+{% block content %}
+
+<header class="header">
+    <a href="{% url 'index' %}" class="logo">Daberechi.</a>
+    <div class="nav-container">
+        <nav class="navbar" id="sidemenu">
+            <div><a href="#home">Home</a></div>
+            <div><a href="#about">About</a></div>
+            <div><a href="#kill">Skill</a></div>
+            <div><a href="#portfolio">Portfolio</a></div>
+            <div><a href="#contact">Contact</a></div>
+            
+            <span class="burger_close" onclick="closemenu()">
+                <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+            </span>
+        </nav>
+        <div class="burger" onclick="openmenu()">
+            <div class="burgers" id="burger1" onclick="openmenu()"></div>
+            <div class="burgers" id="burger2" onclick="openmenu()"></div>
+            <div class="burgers" id="burger3" onclick="openmenu()"></div>
+        </div>
+    </div>
+</header>
+
+{% endblock content %}

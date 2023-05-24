@@ -1,0 +1,22 @@
+{% block content %}
+
+<section class="home" id="home">
+    <div class="home-content">
+        <h1>Hi, I'm <span>{{home.name}}</span></h1>
+        <h3><span class="from">{{home.greetings_1}}</span> <span class="green1">Nig</span><span class="white">er</span><span class="green1">ia</span><br>Welcome to my page</h3>
+        <p>{{home.greetings_2}}</p> 
+        <div class="btn-box">
+            <a href="https://wa.link/by42lu">Hire Me</a>
+            <a href="#message_me">Let's Talk</a>
+        </div>
+        <br>
+        <div class="social">
+            <a href="https://www.facebook.com/Rely4win/"><i id="facebook" class="fa-brands fa-facebook fa-beat-fade"></i></a>
+            <a href="https://twitter.com/rely_smile"><i id="twitter" class="fa-brands fa-twitter fa-beat-fade"></i></a>
+            <a href="https://wa.link/by42lu"><i id="whatsapp" class="fa-brands fa-whatsapp fa-beat-fade"></i></a>
+        </div>
+    </div>
+    <br><br><br>
+    <img src="{{home.picture.url}}" class="img" alt="">                  
+</section>
+{% endblock content %}

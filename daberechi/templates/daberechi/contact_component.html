@@ -1,0 +1,43 @@
+{% block content %}
+
+<style>
+    .messages li{
+        margin-top: 1.5rem;
+        list-style: none;
+        color: #00abf0;    }
+</style>
+
+<section class="contact" id="contact">
+    <div class="contact-left">
+        <h2>Contact me</h2>
+        <p><i class="fa-sharp fa-solid fa-paper-plane"></i> princerelykid@gmail.com</p>
+        <p><i class="fa-solid fa-phone"></i>+2349063676192</p>
+        <br>
+        <div class="social">
+            <a href="https://www.facebook.com/Rely4win/"><i id="facebook" class="fa-brands fa-facebook fa-beat-fade"></i></a>
+            <a href="https://twitter.com/rely_smile"><i id="twitter" class="fa-brands fa-twitter fa-beat-fade"></i></a>
+            <a href="https://wa.link/by42lu"><i id="whatsapp" class="fa-brands fa-whatsapp fa-beat-fade"></i></a>
+        </div>
+    </div>
+
+    <div class="contact-right" id="message_me">
+        <form action="" method="POST">
+            {% csrf_token %}
+            <h1 class="message">Message me</h1>
+            <input type="text" name="name" id="name" placeholder="Your name" required>
+            <br>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <br>
+            <textarea name="message" rows="6" placeholder="Your message" required></textarea><br>
+            <button type="submit" value="submit" class="btn">Submit</button>
+        </form>
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li>Hi, {{names}} {{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+  </section>
+  {% endblock content %}

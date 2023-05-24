@@ -1,0 +1,18 @@
+{% block content %}
+<section class ="portfolio" id="portfolio">
+    <h2>My Works</h2>
+    <div class="notice">click on the image to view a project</div>
+    <div class="work-list">
+        {% for project in portfolio %}
+        <div class="work">
+            <img src="{{project.image.url}}" alt="">
+            <div class="layer">
+                <h3>social Media App</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, perferendis. Quae aspernatur laboriosam eligendi! Eos modi suscipit, possimus consectetur</p>
+                <a href="#">check me out</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+  </section>
+  {% endblock content %}

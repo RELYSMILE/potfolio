@@ -1,0 +1,27 @@
+{% block content %}
+<section class="about-countainer" id="about">
+    <br><br><br><br>
+    <div class="about-content">
+        <div id="heading-about-md">About me</div>
+        <div class="img">
+            <img src="{{about.profile_img.url}}" alt="">
+        </div>
+        <div class="about">
+            <div class="heading-about">About me</div>
+                <h2>{{about.heading}}</h2>
+                <p>{{about.career}}</p>
+                <div class="description">{{about.description}}</div>
+                <br>
+                <div class="social">
+                    <a href="https://www.facebook.com/Rely4win/"><i id="facebook" class="fa-brands fa-facebook fa-beat-fade"></i></a>
+                    <a href="https://twitter.com/rely_smile"><i id="twitter" class="fa-brands fa-twitter fa-beat-fade"></i></a>
+                    <a href="https://wa.link/by42lu"><i id="whatsapp" class="fa-brands fa-whatsapp fa-beat-fade"></i></a>
+                </div>
+            {% for a in profile %}
+            <div><a href="{{a.social_link}}"><!--{{a.social_name}}--></a></div>
+
+            {% endfor %}
+        </div>
+    </div>
+    </section>
+{% endblock content %}

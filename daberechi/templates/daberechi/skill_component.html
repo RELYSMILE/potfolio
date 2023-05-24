@@ -1,0 +1,37 @@
+{% block content %}
+<br><br><br><br><br>
+<section class="skill-container" id="kill">
+    <div class="skill-content">
+        <div class="skills">
+            <h1 class="heading-skill">Skill</h1>        
+            {% for category in categories %}
+            <h2>{{category.name}}</h2>
+            <div class="skill_name_container">{% for skills in category.skill_set.all %}
+            <span class="skill_name">{{skills.skill_name}}</span>
+            {% endfor %}
+            </div>
+            <br>
+            {% endfor %}
+        </div>
+        <div class="skill_description">
+            <span class="skill_description_heading">Python:</span> I have extensive experience in Python programming language, including working with libraries Django, Tkinter, kivy. I am proficient in writing clean and efficient Python code for various applications.<br>
+            <span class="skill_description_heading">Django:</span> I specialize in developing web applications using the Django framework. I am skilled in creating robust backends, designing database models, and implementing RESTful APIs.<br>
+
+            <span class="skill_description_heading">HTML/CSS:</span> I have a strong understanding of HTML and CSS, enabling me to create visually appealing and responsive web pages. I am proficient in modern CSS frameworks like Bootstrap.<br>
+
+            <span class="skill_description_heading">JavaScript:</span> I am skilled in JavaScript. I can develop interactive and dynamic web interfaces using JavaScript.<br>
+
+            <span class="skill_description_heading">PHP:</span> I have a good understanding of PHP and have worked on projects. I can build custom web applications and integrate them with databases.<br>
+
+            <span class="skill_description_heading">Database Management:</span> I am experienced in working with both SQL and NoSQL databases such as MySQL, PostgreSQL. I can design efficient database schemas and write optimized queries.<br>
+
+            <span class="skill_description_heading">Problem Solving:</span> I possess strong problem-solving skills and can analyze complex issues to find effective solutions. I am adept at troubleshooting and debugging code.<br>
+
+            <span class="skill_description_heading">Project Management:</span> I have experience in managing and coordinating web development projects, ensuring timely delivery and effective communication with stakeholders.<br>
+        </div>
+</div>
+
+<h4>{{skill.skill_name}}</h4>
+
+</section>
+{% endblock content %}
